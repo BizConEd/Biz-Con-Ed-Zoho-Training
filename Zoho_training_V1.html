@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz Con Ed LLC - Zoho Training & Consulting</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #1e293b;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 32px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .training-topics {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .topics-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .topics-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+        
+        .topics-subtitle {
+            font-size: 16px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        
+        .topic-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .topic-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .topic-description {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        
+        .app-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .app-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #334155;
+        }
+        
+        .app-item:before {
+            content: "•";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: white;
+        }
+        
+        .pricing-card {
+            padding: 40px;
+            position: relative;
+            border-right: 1px solid #e2e8f0;
+        }
+        
+        .pricing-card:last-child {
+            border-right: none;
+        }
+        
+        .card-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #1e40af;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+        
+        .best-value-pill {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #10b981 0%, #22c55e 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        .card-price {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+        
+        .card-price .period {
+            font-size: 16px;
+            font-weight: 500;
+            color: #64748b;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 24px 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: #334155;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #0ea5e9;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #0c4a6e;
+            line-height: 1.4;
+        }
+        
+        .info-box strong {
+            color: #0c4a6e;
+        }
+        
+        .fine-print {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 12px;
+            font-style: italic;
+        }
+        
+        .footer-strip {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 32px 40px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .footer-text {
+            font-size: 16px;
+            color: #334155;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-button {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-button.solid {
+            background: #1e40af;
+            border: 2px solid #1e40af;
+            color: white;
+        }
+        
+        .footer-button.solid:hover {
+            background: #3b82f6;
+            border-color: #3b82f6;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+        
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .app-grid[style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            
+            .pricing-card:last-child {
+                border-bottom: none;
+            }
+            
+            .footer-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-button {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Biz Con Ed LLC</h1>
+            <p>Professional Zoho Training & Implementation Services</p>
+        </div>
+        
+        <div class="pricing-cards">
+            <!-- Left Card -->
+            <div class="pricing-card">
+                <div class="card-badge">Private • Live</div>
+                <h2 class="card-title">One-on-One Zoho Training (Tailored)</h2>
+                <div class="card-price">
+                    $65<span class="period"> / hour • per person</span>
+                </div>
+                
+                <ul class="features-list">
+                    <li>Customized Zoho app training based on your business needs</li>
+                    <li>Live instruction with screen-share and hands-on practice</li>
+                    <li>Flexible scheduling (subject to availability)</li>
+                    <li>Focus on specific Zoho applications or integration workflows</li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>Complimentary:</strong> Recording included free.
+                </div>
+                
+                <div class="fine-print">
+                    Pricing is per person.
+                </div>
+            </div>
+            
+            <!-- Right Card -->
+            <div class="pricing-card">
+                <div class="card-badge">Live • Q&A</div>
+                <h2 class="card-title">Group Zoho Webinar (Overview)</h2>
+                <div class="card-price">
+                    $25<span class="period"> / person • 60 min</span>
+                </div>
+                
+                <ul class="features-list">
+                    <li>Zoho One 101: CRM, Books, Projects, Campaigns, Desk overview</li>
+                    <li>How the 45+ Zoho apps integrate across departments</li>
+                    <li><strong>Interactive Q&A segment</strong></li>
+                    <li><strong>Recording + slides available for 7 days</strong></li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>Complimentary:</strong> Recording included free.
+                </div>
+                
+                <div class="fine-print">
+                    Seats are per person. Group discounts available for 3+.
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-strip">
+            <div class="footer-text">
+                Need a group Zoho training webinar for 3 or more people? Email <strong>info@bizconed.com</strong> for more details.<br><br>
+                Want to book a free 30 minute call to see what Zoho training options we offer for your one-on-one custom tailored needs? Click this button to book:
+            </div>
+            <div class="footer-buttons">
+                <a href="https://suleiry-bizconed.zohobookings.com/#/4763141000000583363" class="footer-button solid" target="_blank">Book a Discovery Call</a>
+            </div>
+        </div>
+        
+        <div class="training-topics">
+            <div class="topics-header">
+                <h2 class="topics-title">Comprehensive Zoho Training Programs</h2>
+                <p class="topics-subtitle">Master the complete Zoho ecosystem and transform your business operations with expert-led training sessions</p>
+            </div>
+            
+            <div class="topics-grid">
+                <div class="topic-section zoho-one">
+                    <h3>Zoho One Ecosystem</h3>
+                    <p class="topic-description">Understand how Zoho One creates a unified business operating system with 45+ integrated applications working seamlessly together.</p>
+                    <div class="app-grid">
+                        <div class="app-item">Unified Dashboard</div>
+                        <div class="app-item">Cross-App Integration</div>
+                        <div class="app-item">Single Sign-On</div>
+                        <div class="app-item">Data Synchronization</div>
+                        <div class="app-item">Workflow Automation</div>
+                        <div class="app-item">Central User Management</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="topics-grid" style="margin-top: 32px;">
+                <div class="topic-section" style="grid-column: 1 / -1;">
+                    <h3>Complete Zoho Application Suite</h3>
+                    <p class="topic-description">Comprehensive training available for all Zoho applications - from essential business tools to specialized solutions for every department.</p>
+                    <div class="app-grid" style="grid-template-columns: repeat(4, 1fr); gap: 8px;">
+                        <div class="app-item">Zoho CRM</div>
+                        <div class="app-item">Zoho Books</div>
+                        <div class="app-item">Zoho Desk</div>
+                        <div class="app-item">Zoho Projects</div>
+                        <div class="app-item">Zoho Campaigns</div>
+                        <div class="app-item">Zoho Creator</div>
+                        <div class="app-item">Zoho Analytics</div>
+                        <div class="app-item">Zoho People</div>
+                        <div class="app-item">Zoho Inventory</div>
+                        <div class="app-item">Zoho Social</div>
+                        <div class="app-item">Zoho WorkDrive</div>
+                        <div class="app-item">Zoho Mail</div>
+                        <div class="app-item">Zoho Sites</div>
+                        <div class="app-item">Zoho Bookings</div>
+                        <div class="app-item">Zoho Sign</div>
+                        <div class="app-item">Zoho Notebook</div>
+                        <div class="app-item">Zoho Vault</div>
+                        <div class="app-item">Zoho Invoice</div>
+                        <div class="app-item">Zoho Expense</div>
+                        <div class="app-item">Zoho Billing</div>
+                        <div class="app-item">Zoho Payroll</div>
+                        <div class="app-item">Zoho Commerce</div>
+                        <div class="app-item">Zoho Recruit</div>
+                        <div class="app-item">Zoho Survey</div>
+                        <div class="app-item">Zoho Forms</div>
+                        <div class="app-item">Zoho Assist</div>
+                        <div class="app-item">Zoho Lens</div>
+                        <div class="app-item">Zoho SalesIQ</div>
+                        <div class="app-item">Zoho PageSense</div>
+                        <div class="app-item">Zoho Backstage</div>
+                        <div class="app-item">Zoho Meeting</div>
+                        <div class="app-item">Zoho Cliq</div>
+                        <div class="app-item">Zoho ShowTime</div>
+                        <div class="app-item">Zoho Writer</div>
+                        <div class="app-item">Zoho Sheet</div>
+                        <div class="app-item">Zoho Show</div>
+                        <div class="app-item">Zoho Connect</div>
+                        <div class="app-item">Zoho Sprints</div>
+                        <div class="app-item">Zoho BugTracker</div>
+                        <div class="app-item">Zoho Flow</div>
+                        <div class="app-item">Zoho OneAuth</div>
+                        <div class="app-item">Zoho Checkout</div>
+                        <div class="app-item">Zoho Thrive</div>
+                        <div class="app-item">Zoho LandingPage</div>
+                        <div class="app-item">Zoho Bigin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
