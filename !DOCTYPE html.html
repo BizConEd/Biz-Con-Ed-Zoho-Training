@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication With Suleiry – DO vs. DON'T</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #333;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .column {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .column.do {
+            border-left: 5px solid #28a745;
+        }
+        
+        .column.dont {
+            border-left: 5px solid #dc3545;
+        }
+        
+        .column h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .column.do h2 {
+            color: #28a745;
+        }
+        
+        .column.dont h2 {
+            color: #dc3545;
+        }
+        
+        .column ul {
+            list-style: none;
+        }
+        
+        .column ul li {
+            padding: 12px 0 12px 30px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            position: relative;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .column ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .column.do ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .column.dont ul li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, #333, #999, #333);
+            margin: 50px 0;
+        }
+        
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .format-box {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid #333;
+        }
+        
+        .format-box h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .format-box .content {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .format-box .content strong {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        
+        .format-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .format-box ul li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+        }
+        
+        .format-box ul li:before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Communication With Suleiry – DO vs. DON'T</h1>
+        </div>
+        
+        <div class="columns">
+            <div class="column do">
+                <h2>DO</h2>
+                <ul>
+                    <li>Get to the point quickly</li>
+                    <li>Use bullet points</li>
+                    <li>State the outcome before the details</li>
+                    <li>Ask: "What's the priority?"</li>
+                    <li>Provide 2–3 solution options</li>
+                    <li>Confirm understanding and deadlines</li>
+                    <li>Give regular status updates</li>
+                    <li>Be proactive and take initiative</li>
+                </ul>
+            </div>
+            
+            <div class="column dont">
+                <h2>DON'T</h2>
+                <ul>
+                    <li>Write long paragraphs</li>
+                    <li>Overexplain or include unnecessary detail</li>
+                    <li>Delay action while "thinking it through"</li>
+                    <li>Come with problems only</li>
+                    <li>Assume she knows you're working on something</li>
+                    <li>Wait for her to follow up</li>
+                    <li>Take direct communication as frustration</li>
+                    <li>Overcomplicate simple tasks</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="bottom-section">
+            <div class="format-box">
+                <h3>Best Format for Updates</h3>
+                <div class="content">
+                    <strong>Subject: Task + Status</strong>
+                    <strong>Body:</strong>
+                    <ul>
+                        <li>Current status</li>
+                        <li>Risks/issues</li>
+                        <li>Recommendation</li>
+                        <li>ETA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="format-box">
+                <h3>Best Format for Questions</h3>
+                <div class="content">
+                    <ul>
+                        <li>"I need clarification on…"</li>
+                        <li>"Which option do you prefer?"</li>
+                        <li>"Priority: High/Medium/Low?"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
